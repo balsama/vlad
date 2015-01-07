@@ -11,7 +11,7 @@
 # Change settings here to control how Vlad sets up your box.
 
 # Webserver settings
-  webserver_hostname: 'drupal.local'
+  webserver_hostname: 'vlad.local'
   webserver_hostname_alias: 'www.{{ webserver_hostname }}'
 
 # Vagrantfile configuration
@@ -41,7 +41,7 @@
 
   php_install: "y"
 
-  pimpmylog_install: "y"
+  pimpmylog_install: "n"
 
   redis_install: "n"
 
@@ -51,15 +51,15 @@
 
   solr_install: "n"
 
-  varnish_install: "y" # If you turn this off then make sure you set the http_port to be 80.
+  varnish_install: "n" # If you turn this off then make sure you set the http_port to be 80.
 
-  xhprof_install: "y"
+  xhprof_install: "n"
 
 # Provision with custom playbooks
   custom_provision: "n"
 
 # HTTP port for the web server. If you have turned off Varnish then you might want to set this to "80"
-  http_port: 8080
+  http_port: 80
 
 # HTTP port for the Varnish cache
   varnish_http_port: 80
@@ -93,11 +93,11 @@
 
 # MySQL Settings
   mysql_port: 3306
-  mysql_root_password: sdfds87643y5thgfd
+  mysql_root_password: vlad
   server_hostname: vlad
-  dbname: vladdb
+  dbname: vlad
   dbuser: vlad
-  dbpass: wibble
+  dbpass: vlad
 
 # MySQL my.cnf settings
   mysql_max_allowed_packet: 128M
@@ -147,3 +147,4 @@
 
 # Use 'nfs' or 'rsync' for VM file editing in synced folder
   synced_folder_type: 'nfs'
+
